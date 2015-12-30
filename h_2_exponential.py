@@ -13,12 +13,8 @@ def h_2_exponential(lx,lw):
   #
   # lx and lw can be either scalars or scipy arrays, but they must have
   # the same dimensions
-
-
   foo = sp.sort(sp.vstack((lx,lw)),0)
-
   hy = [h_noteq(r[0],r[1]) if (r[0]!=r[1]) else h_eq(r[0]) for r in sp.transpose(foo)]
-
   return sp.array(hy)
 
 def h_eq(lw):
